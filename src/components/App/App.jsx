@@ -7,6 +7,7 @@ import { Section } from 'components/Section/Section';
 import { Form } from 'components/Form/Form';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
+import { Wrapper } from './App.styled';
 
 // #########################################
 
@@ -80,7 +81,7 @@ export default class App extends Component {
     } = this;
 
     return (
-      <>
+      <Wrapper>
         <Section title="Phonebook">
           <Form onSubmit={formSubmitHandler} />
         </Section>
@@ -97,7 +98,7 @@ export default class App extends Component {
             />
           )}
         </Section>
-      </>
+      </Wrapper>
     );
   }
 }

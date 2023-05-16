@@ -1,8 +1,9 @@
-export const Contacts = ({ contactList, onDeleteContact }) => {
-  console.log('contactList: ', contactList);
+import PropTypes from 'prop-types';
+
+export const Contacts = ({ contacts, onDeleteContact }) => {
   return (
     <ul className="todoList">
-      {contactList.map(({ id, name, number }) => (
+      {contacts.map(({ id, name, number }) => (
         <li className="contacts-list-item" key={id}>
           {/* Contact name and phone number */}
           <p className="contact-text">
@@ -15,4 +16,14 @@ export const Contacts = ({ contactList, onDeleteContact }) => {
       ))}
     </ul>
   );
+};
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };

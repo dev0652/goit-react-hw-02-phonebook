@@ -76,7 +76,7 @@ export default class App extends Component {
 
           {contacts.length > 0 && (
             <Contacts
-              contactList={getFilteredContacts()}
+              contacts={getFilteredContacts()}
               onDeleteContact={deleteContact}
             />
           )}

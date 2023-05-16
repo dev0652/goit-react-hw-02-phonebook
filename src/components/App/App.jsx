@@ -22,6 +22,22 @@ export default class App extends Component {
   };
 
   formSubmitHandler = ({ name, number }) => {
+    const { checkIfContactExists, addContact } = this;
+
+    return checkIfContactExists(name)
+      ? alert(`${name} is already a contact`)
+      : addContact(name, number);
+  };
+
+  checkIfContactExists = nameToCompare => {
+    const { contacts } = this.state;
+
+    return contacts.find(
+      ({ name }) => name.toLowerCase() === nameToCompare.toLowerCase()
+    );
+  };
+
+  addContact = (name, number) => {
     const contact = {
       id: nanoid(),
       name,

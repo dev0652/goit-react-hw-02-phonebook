@@ -2,9 +2,14 @@ import PropTypes from 'prop-types';
 import { List, ListItem } from './Contacts.styled';
 
 export const Contacts = ({ contacts, onDeleteContact }) => {
+  // Sort contacts in alphabetical order
+  const sortedContacts = [...contacts].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <List>
-      {contacts.map(({ id, name, number }) => (
+      {sortedContacts.map(({ id, name, number }) => (
         <ListItem key={id}>
           {/* Contact name and phone number */}
           <p className="contact-text">

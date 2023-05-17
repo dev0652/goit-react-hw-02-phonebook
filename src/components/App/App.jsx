@@ -93,11 +93,9 @@ export default class App extends Component {
             <Filter value={filter} onChange={changeFilter} />
           )}
 
-          {contacts.length === 0 && (
+          {contacts.length === 0 ? (
             <Notification message="Your phonebook is empty" />
-          )}
-
-          {contacts.length > 0 && (
+          ) : (
             <Contacts
               contacts={getFilteredContacts()}
               onDeleteContact={deleteContact}

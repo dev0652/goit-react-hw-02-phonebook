@@ -3,10 +3,11 @@ import { nanoid } from 'nanoid';
 
 // #########################################
 
-import { Section } from 'components/Section/Section';
-import { Form } from 'components/Form/Form';
-import { Contacts } from 'components/Contacts/Contacts';
-import { Filter } from 'components/Filter/Filter';
+import Section from 'components/Section';
+import Form from 'components/Form';
+import Contacts from 'components/Contacts';
+import Filter from 'components/Filter';
+
 import { Wrapper } from './App.styled';
 
 // #########################################

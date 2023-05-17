@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { List, ListItem } from './Contacts.styled';
 
-export const Contacts = ({ contacts, onDeleteContact }) => {
+const Contacts = ({ contacts, onDeleteContact }) => {
   // Sort contacts in alphabetical order
   const sortedContacts = [...contacts].sort((a, b) =>
     a.name.localeCompare(b.name)
@@ -23,6 +23,8 @@ export const Contacts = ({ contacts, onDeleteContact }) => {
     </List>
   );
 };
+
+export default Contacts;
 
 Contacts.propTypes = {
   contacts: PropTypes.arrayOf(

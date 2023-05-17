@@ -7,6 +7,7 @@ import Section from 'components/Section';
 import Form from 'components/Form';
 import Contacts from 'components/Contacts';
 import Filter from 'components/Filter';
+import Notification from 'components/Notification';
 
 import { Wrapper } from './App.styled';
 
@@ -90,6 +91,10 @@ export default class App extends Component {
         <Section title="Contacts">
           {contacts.length > 1 && (
             <Filter value={filter} onChange={changeFilter} />
+          )}
+
+          {contacts.length === 0 && (
+            <Notification message="Your phonebook is empty" />
           )}
 
           {contacts.length > 0 && (

@@ -11,3 +11,8 @@ export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
 `;
+
+export const Button = styled.button`
+  border: none;
+  background-color: transparent;
+`;

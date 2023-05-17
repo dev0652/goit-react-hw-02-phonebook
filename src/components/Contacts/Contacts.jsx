@@ -1,5 +1,6 @@
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import PropTypes from 'prop-types';
-import { List, ListItem } from './Contacts.styled';
+import { Button, List, ListItem } from './Contacts.styled';
 
 const Contacts = ({ contacts, onDeleteContact }) => {
   // Sort contacts in alphabetical order
@@ -17,7 +18,9 @@ const Contacts = ({ contacts, onDeleteContact }) => {
           </p>
 
           {/* Delete contact button */}
-          <button onClick={() => onDeleteContact(id)}>Delete</button>
+          <Button onClick={() => onDeleteContact(id)}>
+            <AiOutlineCloseCircle />
+          </Button>
         </ListItem>
       ))}
     </List>

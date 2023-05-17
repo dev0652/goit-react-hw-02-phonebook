@@ -1,4 +1,4 @@
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { BsTrash3 } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import { Button, List, ListItem } from './Contacts.styled';
 
@@ -19,7 +19,7 @@ const Contacts = ({ contacts, onDeleteContact }) => {
 
           {/* Delete contact button */}
           <Button onClick={() => onDeleteContact(id)}>
-            <AiOutlineCloseCircle />
+            <BsTrash3 />
           </Button>
         </ListItem>
       ))}
